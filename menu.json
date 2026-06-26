@@ -1,0 +1,60 @@
+{
+  "info": {
+    "nom": "Restaurant CÉLINE",
+    "adresse": "Barrière Ahala, en face Station Neptune, Axe lourd Yaoundé-Douala",
+    "whatsapp": "23775044583"
+  },
+  "Restaurant": [
+    {"Nom": "--- ENTRÉES ---", "Prix": "", "Photo": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&h=500&fit=crop"},
+    {"Nom": "Salade d'avocat", "Prix": "3500", "Photo": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&h=500&fit=crop"},
+    {"Nom": "Salade de champignons", "Prix": "3000", "Photo": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&h=500&fit=crop"},
+    {"Nom": "Salade de fruits", "Prix": "2500", "Photo": "https://images.unsplash.com/photo-1498579150354-977475b7ea0b?w=500&h=500&fit=crop"},
+    {"Nom": "Salade de légumes", "Prix": "2500", "Photo": "https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?w=500&h=500&fit=crop"},
+
+    {"Nom": "--- GRILLADES ---", "Prix": "", "Photo": "https://images.unsplash.com/photo-1544025162-d76694265947?w=500&h=500&fit=crop"},
+    {"Nom": "Côte de porc", "Prix": "6000", "Photo": "https://images.unsplash.com/photo-1544025162-d76694265947?w=500&h=500&fit=crop"},
+    {"Nom": "Poisson braisé", "Prix": "7000", "Photo": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=500&h=500&fit=crop"},
+    {"Nom": "Bar grillé", "Prix": "8000", "Photo": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=500&h=500&fit=crop"},
+    {"Nom": "Les sols", "Prix": "7500", "Photo": "https://images.unsplash.com/photo-1615937736976-67840c1b3e7c?w=500&h=500&fit=crop"},
+    {"Nom": "Frais", "Prix": "7500", "Photo": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&h=500&fit=crop"},
+    {"Nom": "Carpe", "Prix": "6500", "Photo": "https://images.unsplash.com/photo-1564480508222-4c5aeccfe1d7?w=500&h=500&fit=crop"},
+
+    {"Nom": "--- PLATS CHAUDS ---", "Prix": "", "Photo": "attachment://1458523689374105"},
+    {"Nom": "Ndolè Viande", "Prix": "4500", "Photo": "attachment://1458523689374105"},
+    {"Nom": "Ndolè Crevettes", "Prix": "5000", "Photo": "attachment://1458523689374105"},
+    {"Nom": "Gambas sautées", "Prix": "6500", "Photo": "https://images.unsplash.com/photo-1625943553852-781c3e88bce0?w=500&h=500&fit=crop"},
+    {"Nom": "Grosses Crevettes sautées", "Prix": "7000", "Photo": "https://images.unsplash.com/photo-1625943553852-781c3e88bce0?w=500&h=500&fit=crop"},
+    {"Nom": "Rognons", "Prix": "4500", "Photo": "https://images.unsplash.com/photo-1547592180-85f173990888?w=500&h=500&fit=crop"},
+    {"Nom": "Poulet", "Prix": "4000", "Photo": "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=500&h=500&fit=crop"},
+
+    {"Nom": "--- DESSERTS ---", "Prix": "", "Photo": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500&h=500&fit=crop"},
+    {"Nom": "Bas bretons", "Prix": "2000", "Photo": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500&h=500&fit=crop"},
+    {"Nom": "Fruit de saison - Jus", "Prix": "1500", "Photo": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=500&h=500&fit=crop"},
+    {"Nom": "Fruit de saison - En cascades", "Prix": "2500", "Photo": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=500&h=500&fit=crop"},
+    {"Nom": "Fruit de saison - Un morceau", "Prix": "1000", "Photo": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=500&h=500&fit=crop"}
+  ],
+  "Pizza": [
+    {"Nom": "Margherita Truffe", "Prix": "6500", "Photo": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&h=500&fit=crop"},
+    {"Nom": "4 Fromages Premium", "Prix": "7000", "Photo": "https://images.unsplash.com/photo-1593246049226-ded77bf90326?w=500&h=500&fit=crop"},
+    {"Nom": "Pepperoni Royal", "Prix": "7500", "Photo": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=500&h=500&fit=crop"},
+    {"Nom": "Saumon Fumé & Aneth", "Prix": "8500", "Photo": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&h=500&fit=crop"},
+    {"Nom": "Fruits de Mer", "Prix": "9000", "Photo": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&h=500&fit=crop"},
+    {"Nom": "Chèvre Miel & Noix", "Prix": "7000", "Photo": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=500&h=500&fit=crop"},
+    {"Nom": "BBQ Poulet Fumé", "Prix": "6800", "Photo": "https://images.unsplash.com/photo-1565299624946-b28f40a0aeeb?w=500&h=500&fit=crop"},
+    {"Nom": "Végétarienne Gourmet", "Prix": "6200", "Photo": "https://images.unsplash.com/photo-1579751626657-72bc17010498?w=500&h=500&fit=crop"},
+    {"Nom": "Diavola Piquante", "Prix": "7200", "Photo": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=500&h=500&fit=crop"},
+    {"Nom": "CÉLINE Spéciale Chef", "Prix": "9500", "Photo": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=500&h=500&fit=crop"}
+  ],
+  "Glace": [
+    {"Nom": "Vanille Madagascar", "Prix": "1500", "Photo": "https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?w=500&h=500&fit=crop"},
+    {"Nom": "Chocolat Noir 70%", "Prix": "1500", "Photo": "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=500&h=500&fit=crop"},
+    {"Nom": "Fraise des Bois", "Prix": "1500", "Photo": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=500&h=500&fit=crop"},
+    {"Nom": "Pistache Sicile", "Prix": "1800", "Photo": "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=500&h=500&fit=crop"},
+    {"Nom": "Mangue Passion", "Prix": "1500", "Photo": "https://images.unsplash.com/photo-1488900128323-21503983a07e?w=500&h=500&fit=crop"},
+    {"Nom": "Coco Caramélisé", "Prix": "1500", "Photo": "https://images.unsplash.com/photo-1488900128323-21503983a07e?w=500&h=500&fit=crop"},
+    {"Nom": "Café Gourmet", "Prix": "1500", "Photo": "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=500&h=500&fit=crop"},
+    {"Nom": "Citron Basilic", "Prix": "1500", "Photo": "https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?w=500&h=500&fit=crop"},
+    {"Nom": "Spéculoos", "Prix": "1800", "Photo": "https://images.unsplash.com.photo-1501443762994-82bd5dace89a?w=500&h=500&fit=crop"},
+    {"Nom": "Cheesecake", "Prix": "1800", "Photo": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=500&h=500&fit=crop"}
+  ]
+}

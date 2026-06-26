@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin CÉLINE V2</title>
+<style>
+  body{font-family:Arial;background:#0A0A0A;color:#fff;padding:15px}
+  h1{color:#FFD700;text-align:center}
+  input,textarea,button{width:100%;padding:12px;margin:8px 0;background:#1A1A1A;color:#fff;border:1px solid #333;border-radius:8px;font-size:16px}
+  button{background:#FFD700;color:#000;font-weight:bold}
+ .item{background:#1A1A1A;padding:10px;margin:10px 0;border-radius:8px}
+ .cat{color:#FFD700;font-size:20px;margin-top:20px;border-bottom:1px solid #FFD700}
+</style>
+</head>
+<body>
+<h1>Modifier le Menu CÉLINE</h1>
+<div id="app">Chargement...</div>
+<button onclick="save()">💾 Enregistrer menu.json</button>
+
+<script>
+let data={};
+async function load(){
+  const res=await fetch('menu.json');
+  data=await res.json();
+  let html=`<label>Nom Resto:</label><input id="nom" value="${data.info.nom}">
+  <label>Adresse:</label><input id="adresse" value="${data.info.adresse}">
+  <label>WhatsApp 2376...</label><input id="wa" value="${data.info.whatsapp}">`;
+
+  for(const cat of ['Restaurant','Pizza','Glace']){
+    html+=`<div class="cat">${cat}</div>`;
+    data[cat].forEach((item,i)=>{
+      html+=`<div class="item">
+        <input placeholder="Nom" value="${item.Nom}" oninput="data['${cat}'][${i}].Nom=this.value">
+        <input placeholder="Prix" value="${item.Prix}" oninput="data['${cat}'][${i}].Prix=this.value">
+        <input placeholder="Photo URL" value="${item.Photo}" oninput="data['${cat}'][${i}].Photo=this.value">
+      </div>`;
+    });
+    html+=`<button onclick="addItem('${cat}')">+ Ajouter plat à ${cat}</button>`;
+  }
+  document.getElementById('app').innerHTML=html;
+}
+function addItem(cat){data[cat].push({Nom:"Nouveau Plat",Prix:"0",Photo:"images/photo.jpg"});load();}
+function save(){
+  data.info.nom=document.getElementById('nom').value;
+  data.info.adresse=document.getElementById('adresse').value;
+  data.info.whatsapp=document.getElementById('wa').value;
+  const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='menu.json';
+  a.click();
+  alert('Fichier menu.json téléchargé. Remplace l’ancien dans Acode.');
+}
+load();
+</script>
+<div style="text-align:center;margin-top:30px;padding-top:15px;border-top:1px solid #333;color:#666;font-size:12px">
+  Backoffice développé par <strong style="color:#FFD700">DIVAINE AGENCY</strong>
+</div>
+</body>
+</html>

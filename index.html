@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant CÉLINE</title>
+  <script>if(window.netlifyIdentity)window.netlifyIdentity.on("init",user=>{if(!user)window.netlifyIdentity.on("login",()=>{document.location.href="/admin/";});</script>
+  <style>
+    :root { --gold: #FFD700; --bleu-chic: #0A192F; --bg: #0A0A0A; --card: #1A1A1A; }
+    body { font-family: 'Arial', sans-serif; background:var(--bg); color:#fff; margin:0; padding-bottom:100px; }
+    header { background:var(--bleu-chic); padding:20px; text-align:center; border-bottom:2px solid var(--gold); }
+    header h1 { color:var(--gold); margin:0; font-size: 26px; letter-spacing: 2px; text-transform:uppercase; }
+    nav { display:flex; position:sticky; top:0; z-index:10; background: #000; }
+    nav button { flex:1; padding:18px; background:transparent; border:none; color:#aaa; font-weight:bold; font-size:15px; text-transform:uppercase; }
+    nav button.active { color:var(--gold); border-bottom:3px solid var(--gold); background: #111; }
+   .page { display:none; padding:20px; }
+   .page.active { display:block; }
+   .item { display:flex; gap:15px; margin:12px 0; padding:12px; background:var(--card); border-radius:12px; align-items:center; }
+   .item img { width:90px; height:90px; object-fit:cover; border-radius:8px; }
+   .item div { flex:1; }
+   .item p { margin:0 0 5px 0; font-size: 17px; }
+   .item span { font-weight:bold; color:var(--gold); font-size: 18px; }
+   .separator { background: transparent; color: var(--gold); font-weight: bold; font-size: 18px; letter-spacing: 1px; text-align: center; padding: 25px 0 10px 0; margin-top: 20px; border-bottom: 1px solid rgba(255, 215, 0, 0.3); display: flex; align-items: center; gap: 15px; }
+   .separator::before,.separator::after { content: ''; flex: 1; height: 1px; background: rgba(255, 215, 0, 0.3); }
+   .separator span { display:none; }
+    footer { padding:20px; text-align:center; background:var(--bleu-chic); color:#ccc; }
+   .btn-whatsapp { position:fixed; bottom:20px; left:20px; right:20px; background: #25D366; color:#fff; padding:18px; border-radius:12px; text-decoration:none; font-weight:bold; font-size:18px; text-align:center; }
+  </style>
+</head>
+<body>
+  <header><h1 id="nom-resto">CÉLINE</h1></header>
+  <nav>
+    <button class="tab-btn active" onclick="showPage('restaurant')">Restaurant</button>
+    <button class="tab-btn" onclick="showPage('pizza')">Pizza</button>
+    <button class="tab-btn" onclick="showPage('glace')">Glace</button>
+  </nav>
+  <div id="restaurant" class="page active"></div>
+  <div id="pizza" class="page"></div>
+  <div id="glace" class="page"></div>
+  <footer><p id="adresse"></p></footer>
+  <a id="btn-wa" class="btn-whatsapp" target="_blank">📲 Réserver sur WhatsApp</a>
+  <script>
+    let allData = {};
+    function showPage(id) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`button[onclick="showPage('${id}')"]`).classList.add('active');
+    }
+    function render() {
+      document.getElementById("nom-resto").textContent = allData.info.nom;
+      document.getElementById("adresse").textContent = allData.info.adresse;
+      document.getElementById("btn-wa").href = `https://wa.me/${allData.info.whatsapp}?text=Bonjour%20CÉLINE,%20je%20veux%20réserver%20une%20table`;
+      for(const cat of ['Restaurant', 'Pizza', 'Glace']) {
+        const container = document.getElementById(cat.toLowerCase());
+        let html = '';
+        allData[cat].forEach(item => {
+          if (item.Prix === "") { html += `<div class="separator">${item.Nom.replace(/---/g, '')}</div>`; }
+          else { html += `<div class="item"><img src="${item.Photo}" alt="${item.Nom}" onerror="this.src='https://placehold.co/90x90/1A1A1A/FFD700?text=CELINE'"><div><p>${item.Nom}</p><span>${item.Prix} FCFA</span></div></div>`; }
+        });
+        container.innerHTML = html;
+      }
+    }
+    async function loadMenu() { const res = await fetch('menu.json'); allData = await res.json(); render(); }
+    loadMenu();
+  </script>
+  <footer style="padding:25px 20px;text-align:center;background:#0A192F;color:#ccc;border-top:2px solid #FFD700">
+  <p id="adresse" style="margin:0 0 10px 0"></p>
+  <p style="margin:0;font-size:12px;color:#FFD700;opacity:0.8">
+    Site créé par <strong>DIVAINE AGENCY</strong> | +237 671725245
+  </p>
+</footer>
+</body>
+</html>

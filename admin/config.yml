@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: https://github.com/boydivane007-hub/C-line-/new/main# 
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+    - name: "menu"
+    label: "Menu Restaurant Céline"
+    folder: "data"
+    create: false
+    slug: "menu"
+    extension: "json"
+    fields:
+            - {label: "Restaurant", name: "restaurant", widget: "list", summary: "{{fields.nom}} - {{fields.prix}} FCFA", fields: [{label: "Nom", name: "nom", widget: "string"}, {label: "Prix FCFA", name: "prix", widget: "number"}, {label: "Desc", name: "desc", widget: "text", required: false}]}
+            - {label: "Pizzeria", name: "pizzeria", widget: "list", summary: "{{fields.nom}} - {{fields.prix}} FCFA", fields: [{label: "Nom", name: "nom", widget: "string"}, {label: "Prix FCFA", name: "prix", widget: "number"}]}
+            - {label: "Glacier", name: "glacier", widget: "list", summary: "{{fields.nom}} - {{fields.prix}} FCFA", fields: [{label: "Nom", name: "nom", widget: "string"}, {label: "Prix FCFA", name: "prix", widget: "number"}, {label: "Image", name: "image", widget: "image", required: false}]}

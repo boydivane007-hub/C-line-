@@ -1,7 +1,7 @@
 {
   "info": {
     "nom": "Restaurant CÉLINE",
-    "adresse": "Barrière Ahala, en face Station Neptune, Axe lourd Yaoundé-Douala",
+    "adresse": "Situé à Barrière Ahala, en face Station Neptune, Axe lourd Yaoundé-Douala",
     "whatsapp": "23775044583"
   },
   "Restaurant": [
@@ -20,7 +20,7 @@
     {"Nom": "Carpe", "Prix": "6500", "Photo": "https://images.unsplash.com/photo-1564480508222-4c5aeccfe1d7?w=500&h=500&fit=crop"},
 
     {"Nom": "--- PLATS CHAUDS ---", "Prix": "", "Photo": "attachment://1458523689374105"},
-    {"Nom": "Ndolè Viande", "Prix": "4500", "Photo": "attachment://1458523689374105"},
+    {"Nom": "Ndolè Viande", "Prix": "5000", "Photo": "attachment://1458523689374105"},
     {"Nom": "Ndolè Crevettes", "Prix": "5000", "Photo": "attachment://1458523689374105"},
     {"Nom": "Gambas sautées", "Prix": "6500", "Photo": "https://images.unsplash.com/photo-1625943553852-781c3e88bce0?w=500&h=500&fit=crop"},
     {"Nom": "Grosses Crevettes sautées", "Prix": "7000", "Photo": "https://images.unsplash.com/photo-1625943553852-781c3e88bce0?w=500&h=500&fit=crop"},
